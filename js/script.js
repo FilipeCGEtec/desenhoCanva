@@ -14,6 +14,8 @@ ctx.lineTo(800,600);
 ctx.lineTo(1250,600);
 ctx.bezierCurveTo(1350,650,1350,750,1250,800);
 
+
+//dentes superiores
 ctx.lineTo(1200,750);
 ctx.lineTo(1200,800);
 ctx.lineTo(1150,750);
@@ -38,6 +40,7 @@ ctx.lineTo(800,750);
 
 ctx.bezierCurveTo(750,830,750,870,800,900);
 
+//dentes inferiores
 ctx.lineTo(800,850);
 ctx.lineTo(850,900);
 ctx.lineTo(850,850);
@@ -66,14 +69,21 @@ ctx.quadraticCurveTo(1250,1000,1200,1000);
 ctx.lineTo(450,1000);
 
 //pelo do queixo
-ctx.quadraticCurveTo(330,950,250,1100);
-ctx.quadraticCurveTo(250,900,300,900);
+ctx.quadraticCurveTo(330,1000,200,1200);
+ctx.quadraticCurveTo(200,950,270,900);
 
-ctx.quadraticCurveTo(200,800,175,1000);
+ctx.quadraticCurveTo(250, 1000, 50, 1100);
+ctx.quadraticCurveTo(150, 880, 100, 850);
+
+ctx.quadraticCurveTo(55, 850, 0, 900);
+ctx.lineTo(0, 650)
+ctx.quadraticCurveTo(0, 600, 50, 580);
 
 
 
 
 
-
+fillStyle = "black"
+ctx.fill();
+strokeStyle = "white"
 ctx.stroke();
