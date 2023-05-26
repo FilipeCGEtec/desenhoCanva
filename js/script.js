@@ -3,6 +3,23 @@ const ctx = canvas.getContext("2d");
 canvas.width = 5000;
 canvas.height = 5000;
 
+//Pescoço
+ctx.beginPath();
+ctx.moveTo(450,1000);
+ctx.lineTo(0, 1350);
+ctx.lineTo(0, 600);
+ctx.lineTo(50, 550);
+
+
+
+fillStyle = "black"
+ctx.fill();
+strokeStyle = "white"
+ctx.stroke();
+
+ctx.closePath();
+
+//inicio do lobo
 ctx.beginPath();
 ctx.moveTo(50,600);
 ctx.lineTo(50,200);
@@ -77,13 +94,13 @@ ctx.quadraticCurveTo(150, 880, 100, 850);
 
 ctx.quadraticCurveTo(55, 850, 0, 900);
 ctx.lineTo(0, 650)
-ctx.quadraticCurveTo(0, 600, 50, 580);
+ctx.quadraticCurveTo(0, 630, 50, 580);
 
-
-
-
-
-fillStyle = "black"
-ctx.fill();
-strokeStyle = "white"
+ctx.strokeStyle = "white";
 ctx.stroke();
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.closePath();
+
+
+
