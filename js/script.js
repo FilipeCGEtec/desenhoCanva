@@ -1,7 +1,35 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = 5000;
-canvas.height = 5000;
+canvas.width = window.screen.width * 2;
+canvas.height =  window.screen.height * 2;
+
+
+//arvores 1
+ctx.beginPath();
+ctx.moveTo(0, 1300);
+ctx.arc(100, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(250, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(400, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(550, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(700, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(850, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1000, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1150, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1300, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1450, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1600, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1750, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(1900, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(2050, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(2200, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(2350, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(2500, 1300, 100, 0, 2 * Math.PI);
+ctx.arc(2650, 1300, 100, 0, 2 * Math.PI);
+fillStyle = "28194B";
+ctx.fill();
+
+ctx.closePath();
+
 
 //Pescoço
 ctx.beginPath();
@@ -10,11 +38,9 @@ ctx.lineTo(0, 1350);
 ctx.lineTo(0, 600);
 ctx.lineTo(50, 550);
 
-
-
-fillStyle = "black"
+fillStyle = "black";
 ctx.fill();
-strokeStyle = "white"
+strokeStyle = "white";
 ctx.stroke();
 
 ctx.closePath();
