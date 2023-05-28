@@ -1,32 +1,42 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.screen.width * 2;
-canvas.height =  window.screen.height * 2;
+canvas.width = screen.width * 2;
+canvas.height =  screen.height * 2;
 
+//criando degrade para o fundo
+degrade = ctx.createLinearGradient(0, 0, screen.width * 2, canvas.height * 2);
+degrade.addColorStop(0, '#000a19');
+degrade.addColorStop(1, '#0047b3');
+//colorindo o fundo
+ctx.fillStyle = degrade;
+ctx.fillRect(0,0, canvas.width, canvas.height);
 
 //Arvores 1
 
 ctx.beginPath();
 ctx.moveTo(0, 1000);
-ctx.arc(100, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(250, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(400, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(550, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(700, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(850, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1000, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1150, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1300, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1450, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1600, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1750, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(1900, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(2050, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(2200, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(2350, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(2500, 1000, 120, 0, 2 * Math.PI);
-ctx.arc(2650, 1000, 120, 0, 2 * Math.PI);
-ctx.fillStyle = "#7352cb";
+ctx.arc(100, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(250, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(400, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(550, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(700, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(850, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1000, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1150, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1300, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1450, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1600, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1750, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(1900, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(2050, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(2200, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(2350, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(2500, 1100, 120, 0, 2 * Math.PI);
+ctx.arc(2650, 1100, 120, 0, 2 * Math.PI);
+ctx.lineTo(2770, 2000);
+ctx.lineTo(0, 2200);
+ctx.lineTo(0,1000);
+ctx.fillStyle = "#034149";
 ctx.fill();
 ctx.closePath();
 
@@ -52,7 +62,7 @@ ctx.arc(2200, 1200, 100, 0, 2 * Math.PI);
 ctx.arc(2350, 1200, 100, 0, 2 * Math.PI);
 ctx.arc(2500, 1200, 100, 0, 2 * Math.PI);
 ctx.arc(2650, 1200, 100, 0, 2 * Math.PI);
-ctx.fillStyle = "#523899";
+ctx.fillStyle = "#033025";
 ctx.fill();
 
 ctx.closePath();
@@ -78,7 +88,10 @@ ctx.arc(2200, 1300, 100, 0, 2 * Math.PI);
 ctx.arc(2350, 1300, 100, 0, 2 * Math.PI);
 ctx.arc(2500, 1300, 100, 0, 2 * Math.PI);
 ctx.arc(2650, 1300, 100, 0, 2 * Math.PI);
-ctx.fillStyle = "#312c72";
+ctx.lineTo(2770, 2000);
+ctx.lineTo(0, 2200);
+ctx.lineTo(0,1000);
+ctx.fillStyle = "#011819";
 ctx.fill();
 
 ctx.closePath();
@@ -87,13 +100,12 @@ ctx.closePath();
 ctx.beginPath();
 ctx.moveTo(450,1000);
 ctx.lineTo(0, 1350);
-ctx.lineTo(0, 600);
+ctx.lineTo(0, 700);
 ctx.lineTo(50, 550);
 
-ctx.fillStyle = "black";
+ctx.fillStyle = "#080808";
 ctx.fill();
-ctx.strokeStyle = "white";
-ctx.stroke();
+
 
 ctx.closePath();
 
@@ -174,11 +186,30 @@ ctx.quadraticCurveTo(55, 850, 0, 900);
 ctx.lineTo(0, 650)
 ctx.quadraticCurveTo(0, 630, 50, 580);
 
-ctx.strokeStyle = "white";
-ctx.stroke();
+
 ctx.fillStyle = "black";
 ctx.fill();
 ctx.closePath();
 
+//lua
+ctx.beginPath()
+ctx.MoveTo(2500,500);
+ctx.arc(2500, 500, 220, 0, 2 * Math.PI);
+ctx.fillStyle = '#e6f1ff';
+ctx.fill();
+ctx.closePath();
 
+//montanha
+ctx.beginPath()
+ctx.moveTo(1200, canvas.height);
+ctx.lineTo(1500, 1000);
+ctx.lineTo(1800, 1000);
+ctx.lineTo(1950, 800);
+ctx.lineTo(2000, 700);
+ctx.lineTo(canvas.width, 0);
+ctx.lineTo(canvas.width, canvas.height);
+ctx.lienTo(1200,canvas.height);
 
+ctx.fillStyle = '#000b19';
+ctx.fill();
+ctx.closePath();
