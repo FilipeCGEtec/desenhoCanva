@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = screen.width * 2;
-canvas.height =  screen.height * 2;
+canvas.width = 2700;
+canvas.height = 1500;
 
 //criando degrade para o fundo
 degrade = ctx.createLinearGradient(0, 0, screen.width * 2, canvas.height * 2);
@@ -64,8 +64,8 @@ ctx.arc(2500, 1200, 100, 0, 2 * Math.PI);
 ctx.arc(2650, 1200, 100, 0, 2 * Math.PI);
 ctx.fillStyle = "#033025";
 ctx.fill();
-
 ctx.closePath();
+
 
 //arvores 3
 ctx.beginPath();
@@ -102,7 +102,8 @@ ctx.moveTo(450,1000);
 ctx.lineTo(0, 1350);
 ctx.lineTo(0, 700);
 ctx.lineTo(50, 550);
-
+ctx.strokeStyle = "white";
+ctx.stroke();
 ctx.fillStyle = "#080808";
 ctx.fill();
 
@@ -176,8 +177,8 @@ ctx.quadraticCurveTo(1250,1000,1200,1000);
 ctx.lineTo(450,1000);
 
 //pelo do queixo
-ctx.quadraticCurveTo(330,1000,200,1200);
-ctx.quadraticCurveTo(200,950,270,900);
+ctx.quadraticCurveTo(480,1000,130,1200);
+ctx.quadraticCurveTo(300,950,270,900);
 
 ctx.quadraticCurveTo(250, 1000, 50, 1100);
 ctx.quadraticCurveTo(150, 880, 100, 850);
@@ -189,26 +190,37 @@ ctx.quadraticCurveTo(0, 630, 50, 580);
 
 ctx.fillStyle = "black";
 ctx.fill();
+ctx.strokeStyle = "white";
+ctx.stroke();
+ctx.closePath();
+
+//Olho
+ctx.beginPath();
+ctx.moveTo(450,550);
+ctx.bezierCurveTo(470,500,630,500,650,600);
+ctx.bezierCurveTo(500, 675, 480, 525, 450, 550);
+ctx.fillStyle = "white";
+ctx.fill();
 ctx.closePath();
 
 //lua
 ctx.beginPath()
-ctx.MoveTo(2500,500);
-ctx.arc(2500, 500, 220, 0, 2 * Math.PI);
+ctx.moveTo(2500,500);
+ctx.arc(2500, 300, 220, 0, 2 * Math.PI);
 ctx.fillStyle = '#e6f1ff';
 ctx.fill();
 ctx.closePath();
 
 //montanha
 ctx.beginPath()
-ctx.moveTo(1200, canvas.height);
+ctx.moveTo(1200, 1500);
 ctx.lineTo(1500, 1000);
 ctx.lineTo(1800, 1000);
 ctx.lineTo(1950, 800);
 ctx.lineTo(2000, 700);
-ctx.lineTo(canvas.width, 0);
-ctx.lineTo(canvas.width, canvas.height);
-ctx.lienTo(1200,canvas.height);
+ctx.lineTo(3000, 0);
+ctx.lineTo(3000, 1500);
+ctx.lineTo(1200,1500);
 
 ctx.fillStyle = '#000b19';
 ctx.fill();
