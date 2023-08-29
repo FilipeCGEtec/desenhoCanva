@@ -1,6 +1,6 @@
 class Personagem {
   constructor(posicao, velocidade, posicaoY, numeroDeFlores){
-    this.posicao = posicao;
+    this.posicao = posicaoX;
     this.velociadade = vel;
     this.posicaoY = posY;
     this.numeroDeFlores = numFlores;
@@ -9,10 +9,10 @@ class Personagem {
     
   }
   Andar(){
-
+    posicao = posicaoX + 0.1;
   }
-  Correr(){
-    
+  Pular(){
+    posY = posY + 0.1;
   }
   ColetarFlor(){
     
